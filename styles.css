@@ -1,17 +1,17 @@
 /* Typography, layout, and illustration styling for the engineering portfolio. */
 :root {
-  color-scheme: light;
-  --page: #f5f4ee;
-  --ink: #182e2b;
-  --secondary: #52605c;
-  --accent: #294bd9;
-  --line: #cdd3c9;
+  color-scheme: dark;
+  --page: #0c131b;
+  --ink: #e9eff3;
+  --secondary: #a6b5bf;
+  --accent: #8caaff;
+  --line: #2c3a44;
   --width: 960px;
 }
 * { box-sizing: border-box; }
 html { scroll-padding-top: 1.5rem; -webkit-text-size-adjust: 100%; }
 body { margin: 0; background: var(--page); color: var(--ink); font-family: "Segoe UI", Arial, sans-serif; font-size: 1rem; line-height: 1.65; border-top: 5px solid var(--accent); }
-::selection { background: #d7e1fa; color: var(--ink); }
+::selection { background: #294568; color: var(--ink); }
 .wrap { width: min(var(--width), calc(100% - 3rem)); margin-inline: auto; }
 h1, h2, h3, p, ul, dl, dd { margin: 0; }
 h1, h2, h3 { line-height: 1.12; font-weight: 650; }
@@ -23,7 +23,7 @@ p + p { margin-top: 0.65rem; }
 a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 0.25em; }
 a:hover { text-decoration-thickness: 2px; }
 a:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
-.skip-link { position: absolute; top: 0.5rem; left: 1rem; z-index: 10; padding: 0.6rem 1rem; background: var(--ink); color: white; transform: translateY(-180%); }
+.skip-link { position: absolute; top: 0.5rem; left: 1rem; z-index: 10; padding: 0.6rem 1rem; background: var(--accent); color: var(--page); transform: translateY(-180%); }
 .skip-link:focus { transform: translateY(0); }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 .site-header { padding-top: 1.5rem; }
@@ -35,7 +35,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
 .disciplines { font-size: 1.6rem; line-height: 1.3; letter-spacing: -0.025em; }
 .link-list { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1.2rem; padding: 0; list-style: none; }
 .profile-links { margin-top: 1.25rem; font-size: 0.8125rem; }
-nav { display: flex; flex-wrap: wrap; gap: 0.1rem 1.8rem; padding-block: 0.35rem; border-block: 1px solid var(--ink); }
+nav { display: flex; flex-wrap: wrap; gap: 0.1rem 1.8rem; padding-block: 0.35rem; border-block: 1px solid var(--line); }
 nav a { padding-block: 0.5rem; color: var(--ink); font-size: 0.875rem; font-weight: 600; text-decoration: none; }
 nav a:hover { color: var(--accent); }
 .section { padding-block: 2rem; border-bottom: 1px solid var(--line); }
@@ -47,7 +47,7 @@ nav a:hover { color: var(--accent); }
 .about-grid { display: grid; grid-template-columns: 1.8fr 1fr; gap: 2.5rem; }
 .about-copy p { color: var(--secondary); font-size: 0.9375rem; }
 .about-copy p:first-child { color: var(--ink); font-size: 1.125rem; line-height: 1.55; }
-.education { padding: 1rem 1.2rem; background: #e9ece2; border-left: 2px solid var(--accent); font-size: 0.8125rem; line-height: 1.65; }
+.education { padding: 1rem 1.2rem; background: #15212b; border-left: 2px solid var(--accent); font-size: 0.8125rem; line-height: 1.65; }
 .education h3 { color: var(--accent); font: 0.6875rem Consolas, monospace; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.6rem; }
 .education p + p { margin-top: 0.25rem; }
 .degree { font-weight: 600; }
@@ -68,23 +68,23 @@ nav a:hover { color: var(--accent); }
 .project-links a:hover { border-bottom-width: 2px; }
 .project-links span[aria-hidden] { margin-left: 0.6rem; }
 /* Field-note drawings retain their shared geometry and external styling. */
-.project-sketch { --sketch-paper: #e9ede2; --sketch-ink: #203733; --sketch-blue: #294bd9; grid-column: 2; grid-row: 1 / 3; margin: 0; padding: 1.15rem; background: var(--sketch-paper); color: var(--sketch-ink); border: 1px solid #dbe1d3; position: relative; }
+.project-sketch { --sketch-paper: #14232b; --sketch-ink: #c5d9de; --sketch-blue: #8caaff; grid-column: 2; grid-row: 1 / 3; margin: 0; padding: 1.15rem; background: var(--sketch-paper); color: var(--sketch-ink); border: 1px solid #30434e; position: relative; }
 .project-sketch::before { content: "+"; position: absolute; left: -6px; top: -15px; color: var(--accent); font: 22px Consolas, monospace; }
 .sketch-label, .project-sketch figcaption { display: flex; justify-content: space-between; gap: 0.3rem; font: 0.5625rem/1.5 Consolas, monospace; letter-spacing: 0.03em; }
-.project-sketch svg { display: block; width: 100%; height: auto; margin-block: 0.7rem; background-image: radial-gradient(#b0bdaa 0.65px, transparent 0.65px); background-size: 13px 13px; overflow: visible; }
-#skills { background: #182e2b; color: #f5f4ee; padding: 1.7rem 1.8rem; margin-top: 2rem; border-bottom: none; }
-#skills .section-number { color: #b8cbff; }
+.project-sketch svg { display: block; width: 100%; height: auto; margin-block: 0.7rem; background-image: radial-gradient(#3e535b 0.65px, transparent 0.65px); background-size: 13px 13px; overflow: visible; }
+#skills { background: #17252b; color: #e9eff3; padding: 1.7rem 1.8rem; margin-top: 2rem; border-bottom: none; }
+#skills .section-number { color: #a8c0ff; }
 .skills-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 2rem; }
-.skills-list > div { padding-block: 1rem; border-top: 1px solid #40524b; }
+.skills-list > div { padding-block: 1rem; border-top: 1px solid #344750; }
 .skills-list > div:last-child { grid-column: 1 / -1; }
-.skills-list dt { color: #d1deba; font: 0.6875rem Consolas, monospace; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.5rem; }
-.skills-list dd { color: #e1e6dd; font-size: 0.875rem; }
+.skills-list dt { color: #afcec9; font: 0.6875rem Consolas, monospace; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.5rem; }
+.skills-list dd { color: #d2dfe5; font-size: 0.875rem; }
 .experience-row { display: grid; grid-template-columns: 175px minmax(0, 1fr); gap: 1.5rem; padding-block: 1.1rem; border-top: 1px solid var(--line); font-size: 0.875rem; }
 .experience-row:last-child { padding-bottom: 0; }
 .date { color: var(--accent); font: 0.75rem/1.65 Consolas, monospace; }
 .organization { color: var(--secondary); margin-top: 0.3rem; font-size: 0.8125rem; }
 .experience-row .organization + p { margin-top: 0.4rem; color: var(--secondary); }
-.contact { display: flex; flex-wrap: wrap; align-items: baseline; gap: 1rem 2rem; border-bottom: 1px solid var(--ink); }
+.contact { display: flex; flex-wrap: wrap; align-items: baseline; gap: 1rem 2rem; border-bottom: 1px solid var(--line); }
 .contact > h2 { margin: 0; }
 .contact-links { font-size: 0.875rem; }
 .site-footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem 1rem; padding-block: 1rem 1.75rem; color: var(--secondary); font: 0.6875rem/1.6 Consolas, monospace; }
@@ -131,10 +131,10 @@ nav a:hover { color: var(--accent); }
   .project-row, .experience-row, .education, .skills-list > div { break-inside: avoid; }
   #skills, .project-sketch { print-color-adjust: exact; }
 }
-.project-sketch .construction { fill: none; stroke: #c4cec1; stroke-width: 0.8; }
+.project-sketch .construction { fill: none; stroke: #425a63; stroke-width: 0.8; }
 .project-sketch .drawing { fill: none; stroke: var(--sketch-ink); stroke-width: 1.8; stroke-linejoin: round; stroke-linecap: round; }
 .project-sketch .paper { fill: var(--sketch-paper); }
-.project-sketch .leaf { fill: #dce4d8; }
+.project-sketch .leaf { fill: #28434a; }
 .project-sketch .blue-fill { fill: var(--sketch-blue); stroke: var(--sketch-blue); }
 .project-sketch .ink-fill { fill: var(--sketch-ink); }
 .project-sketch .accent { stroke: var(--sketch-blue); }
@@ -157,7 +157,7 @@ nav a:hover { color: var(--accent); }
   .project-sketch .blue-fill { transform-box: fill-box; transform-origin: center; animation: joint-pulse 3.6s ease-in-out infinite; }
   svg[aria-labelledby="sprout-sketch-title"] .leaf { transform-box: fill-box; transform-origin: bottom center; animation: leaf-sway 5s ease-in-out infinite alternate; }
   @media (hover: hover) {
-    .project-sketch:hover { transform: translateY(-4px); box-shadow: 0 9px 0 -4px #d6decc; }
+    .project-sketch:hover { transform: translateY(-4px); box-shadow: 0 9px 0 -4px #263b4c; }
   }
 }
 @keyframes settle-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
