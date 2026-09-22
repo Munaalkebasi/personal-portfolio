@@ -123,3 +123,53 @@ nav a:hover { color: var(--accent); text-decoration: underline; }
   .project-row, .experience-row, .education, .skills-list > div { break-inside: avoid; }
   a { text-decoration: none; }
 }
+
+/* Coordinated engineering field-note illustrations. */
+.project-sketch {
+  --sketch-paper: #edf0e7;
+  --sketch-ink: #203733;
+  --sketch-blue: #304fd8;
+  margin: 1rem 0 0;
+  padding: 0.75rem;
+  background: var(--sketch-paper);
+  color: var(--sketch-ink);
+  max-width: 300px;
+}
+.sketch-label, .project-sketch figcaption {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.25rem;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 0.5rem;
+  letter-spacing: 0.025em;
+  line-height: 1.5;
+}
+.project-sketch svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-block: 0.5rem;
+  background-image: radial-gradient(#b8c5b8 0.6px, transparent 0.6px);
+  background-size: 12px 12px;
+  overflow: visible;
+}
+.project-sketch .construction { fill: none; stroke: #c4cec1; stroke-width: 0.8; }
+.project-sketch .drawing { fill: none; stroke: var(--sketch-ink); stroke-width: 1.8; stroke-linejoin: round; stroke-linecap: round; }
+.project-sketch .paper { fill: var(--sketch-paper); }
+.project-sketch .leaf { fill: #dce4d8; }
+.project-sketch .blue-fill { fill: var(--sketch-blue); stroke: var(--sketch-blue); }
+.project-sketch .ink-fill { fill: var(--sketch-ink); }
+.project-sketch .accent { stroke: var(--sketch-blue); }
+.project-sketch .annotation { fill: none; stroke: var(--sketch-blue); stroke-width: 0.8; }
+.project-sketch .annotation text { fill: var(--sketch-blue); stroke: none; font: 7px Consolas, "Courier New", monospace; letter-spacing: 0.3px; }
+.project-sketch .dashed { stroke-dasharray: 3 5; }
+@media (min-width: 561px) and (max-width: 760px) {
+  .project-sketch { padding: 0.5rem; }
+  .sketch-label, .project-sketch figcaption { font-size: 0.4375rem; letter-spacing: 0; }
+}
+@media (max-width: 560px) {
+  .project-sketch { margin-bottom: 0.6rem; }
+}
+@media print {
+  .project-sketch { break-inside: avoid; print-color-adjust: exact; }
+}
