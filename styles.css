@@ -11,3 +11,78 @@
 /* Allow illustrated grid items to shrink to the available column width. */
 .project,.hero-copy,.hero-art,.robot-copy,.skill-group{min-width:0}
 
+
+/* Compact layout and a more focused contact panel. */
+@media screen {
+.wrap{max-width:1080px;width:calc(100% - 80px)}
+.nav{min-height:72px}
+.hero{padding-top:44px;gap:24px;grid-template-columns:1.25fr 1fr}
+.hero h1{font-size:clamp(42px,4.5vw,60px)}
+.hero-description{margin-top:22px;font-size:16px}
+.hero-actions{margin-top:22px}.hero-art{max-width:400px}
+.hero-foot{margin-top:0;padding:18px 0}
+.section{padding-top:54px;padding-bottom:54px}
+.section-heading{margin-bottom:28px;gap:24px}
+.section-heading .eyebrow{margin-bottom:12px}
+h2{font-size:clamp(32px,3.3vw,42px)}
+.project-grid{gap:34px 26px}
+.project-visual{height:265px;margin-bottom:18px}
+.project h3{font-size:29px}.project .project-subtitle{margin-bottom:10px}
+details{margin-top:18px}
+.robot-project{gap:26px;padding-top:28px}.robot-visual{height:245px;margin:0}
+.about-section{padding:48px 0}.about-grid{gap:40px}
+.education{margin-top:20px;padding-top:18px}
+.skills-grid{padding-top:20px}
+.experience-section{padding-top:0}.experience-row{padding:20px 0;gap:24px}
+.contact-section{background:var(--paper);color:var(--ink);padding:0}
+.contact-section>.wrap{background:#202f2a;color:#f2f4e9;padding:30px 34px 0}
+.contact-section .eyebrow{margin-bottom:16px}
+.contact-grid{grid-template-columns:1.15fr 1fr;gap:40px;padding-bottom:28px;align-items:center}
+.contact-grid h2{font-size:clamp(36px,4vw,48px);margin-bottom:14px}
+.contact-grid p{font-size:13px;max-width:340px;margin-bottom:10px}
+.email-link{font-size:19px;gap:22px;padding:6px 0}
+.contact-links a{font-size:16px;padding:13px 0}
+footer{padding:16px 0;gap:16px}
+.button,.text-link,.contact-links a,.email-link{transition:transform .22s ease,color .22s ease,background .22s ease}
+.text-link span,.contact-links a span,.email-link span{display:inline-block;transition:transform .22s ease}
+.project-visual{transition:transform .35s ease,box-shadow .35s ease}
+.mark{display:inline-block;transition:transform .5s ease}
+@media(hover:hover){
+.wordmark:hover .mark{transform:rotate(90deg)}
+.button:hover{transform:translateY(-3px)}
+.project:hover .project-visual{transform:translateY(-4px);box-shadow:0 10px 20px #202b2810}
+.text-link:hover span,.contact-links a:hover span,.email-link:hover span{transform:translate(3px,-3px)}
+}
+@media(max-width:1050px){
+.wrap{width:calc(100% - 56px)}
+.hero h1{font-size:clamp(40px,4.8vw,52px)}.hero-art{max-width:360px}
+}
+@media(max-width:760px){
+.wrap{width:calc(100% - 36px)}.nav{min-height:64px}
+.hero{padding-top:30px;grid-template-columns:1fr;gap:24px}
+.hero h1{font-size:clamp(39px,8.5vw,56px)}
+.hero-art{max-width:350px;width:100%}.hero-art svg{max-height:260px}
+.hero-foot{padding:10px 0 16px}
+.section{padding-top:38px;padding-bottom:38px}
+.section-heading{gap:14px;margin-bottom:24px}
+.project-grid{gap:30px}.project-visual{height:255px}
+.robot-project{gap:20px;padding-top:24px}.robot-visual{height:220px}
+.about-section{padding:36px 0}.about-grid{gap:22px}
+.skills-grid{gap:24px 18px}
+.experience-section{padding-top:0}.experience-row{gap:10px;padding:19px 0}
+.contact-section>.wrap{padding:25px 22px 0}
+.contact-grid{grid-template-columns:1fr;gap:20px;padding-bottom:23px}
+.contact-grid h2{font-size:40px}
+.contact-links{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.contact-links a{font-size:12px;gap:5px;padding:12px 0}.contact-links a span{font-size:9px}
+footer{font-size:9px;gap:12px}
+}
+@media(max-width:380px){
+.contact-section>.wrap{padding-inline:18px}.hero h1{font-size:37px}
+.contact-grid h2{font-size:36px}.contact-links{gap:9px}
+}
+@media(prefers-reduced-motion:no-preference){
+.hero-art svg>g:nth-of-type(2){animation:feedback-flow 12s linear infinite}
+@keyframes feedback-flow{to{stroke-dashoffset:-104}}
+}
+}
