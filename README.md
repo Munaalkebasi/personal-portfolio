@@ -1,6 +1,6 @@
 # Muna Al-Kebasi — Engineering portfolio
 
-A compact, responsive portfolio built with HTML and one external CSS file. No JavaScript, frameworks, build tools, external fonts, or JavaScript animations.
+A compact, responsive portfolio built with HTML and one external CSS file.
 
 ## Files
 
