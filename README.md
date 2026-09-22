@@ -25,3 +25,4 @@ Keep the files in the publishing branch's root and retain the repository's exist
 The existing portfolio's SFU education, project details, skills, employment, volunteering, and contact destinations are preserved. The robotics description remains limited to the existing programming, sensors, actuators, and data-acquisition work. No performance metrics, new credentials, or unverified project links have been added.
 
 The three project illustrations share a field-note style: dotted paper, fine engineering lines, and blue annotations. They are labelled concept sketches, not project screenshots or claims about a particular robot. SVG geometry is embedded in the HTML; all visual styling remains in styles.css.
+`nThe visual direction uses a warm paper background, cobalt typography, larger project sketches beside each case study, numbered section headings, and a dark green skills panel.
