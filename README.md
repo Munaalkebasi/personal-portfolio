@@ -1,6 +1,6 @@
 # Muna Al-Kebasi — Engineering portfolio
 
-A compact, responsive portfolio built with HTML and one external CSS file. No JavaScript, frameworks, build tools, external fonts, or animations.
+A compact, responsive portfolio built with HTML and one external CSS file. No JavaScript, frameworks, build tools, external fonts, or JavaScript animations.
 
 ## Files
 
@@ -27,3 +27,5 @@ The existing portfolio's SFU education, project details, skills, employment, vol
 The three project illustrations share a field-note style: dotted paper, fine engineering lines, and blue annotations. They are labelled concept sketches, not project screenshots or claims about a particular robot. SVG geometry is embedded in the HTML; all visual styling remains in styles.css.
 
 The visual direction uses a warm paper background, cobalt typography, larger project sketches beside each case study, numbered section headings, and a dark green skills panel.
+
+CSS motion includes flowing diagram signals, gently pulsing joints, leaf movement, and hover feedback. A visible pause control stops repeating animations, and reduced-motion preferences disable motion automatically.

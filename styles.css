@@ -141,3 +141,37 @@ nav a:hover { color: var(--accent); }
 .project-sketch .annotation { fill: none; stroke: var(--sketch-blue); stroke-width: 0.8; }
 .project-sketch .annotation text { fill: var(--sketch-blue); stroke: none; font: 7px Consolas, "Courier New", monospace; letter-spacing: 0.3px; }
 .project-sketch .dashed { stroke-dasharray: 3 5; }
+/* Motion is CSS-only and can be paused with the visible control. */
+.motion-control { display: flex; justify-content: flex-end; padding-top: 0.9rem; }
+.motion-control label { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--secondary); font: 0.6875rem Consolas, monospace; cursor: pointer; }
+.motion-control input { accent-color: var(--accent); width: 1rem; height: 1rem; margin: 0; }
+.motion-control input:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+  .identity { animation: settle-in 650ms ease-out both; }
+  a { transition: color 180ms ease, border-color 180ms ease; }
+  .project-sketch { transition: transform 240ms ease, box-shadow 240ms ease; }
+  .project-links span[aria-hidden] { display: inline-block; transition: transform 180ms ease; }
+  .project-links a:hover span[aria-hidden], .project-links a:focus-visible span[aria-hidden] { transform: translate(3px, -3px); }
+  .project-sketch .annotation .dashed { animation: signal-flow 6s linear infinite; }
+  .project-sketch .blue-fill { transform-box: fill-box; transform-origin: center; animation: joint-pulse 3.6s ease-in-out infinite; }
+  svg[aria-labelledby="sprout-sketch-title"] .leaf { transform-box: fill-box; transform-origin: bottom center; animation: leaf-sway 5s ease-in-out infinite alternate; }
+  @media (hover: hover) {
+    .project-sketch:hover { transform: translateY(-4px); box-shadow: 0 9px 0 -4px #d6decc; }
+  }
+}
+@keyframes settle-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes signal-flow { to { stroke-dashoffset: -48; } }
+@keyframes joint-pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.18); } }
+@keyframes leaf-sway { from { transform: rotate(-3deg); } to { transform: rotate(3deg); } }
+main:has(#pause-motion:checked) *, main:has(#pause-motion:checked) *::before { animation-play-state: paused; transition: none; }
+main:has(#pause-motion:checked) .project-sketch:hover { transform: none; box-shadow: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .motion-control { display: none; }
+}
+@media print {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .motion-control { display: none; }
+}
