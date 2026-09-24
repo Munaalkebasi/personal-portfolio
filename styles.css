@@ -176,11 +176,23 @@ main:has(#pause-motion:checked) .project-sketch:hover { transform: none; box-sha
   .motion-control { display: none; }
 }
 
-/* CAD projects share a compact layout with prominent drawing links. */
-.cad-project .project-body { grid-column: 2; grid-row: 1 / 3; }
+/* CAD projects retain the shared illustration layout and clear drawing links. */
+.cad-project .project-body { grid-column: 1; grid-row: 2; }
 .cad-project .project-links { gap: 0.65rem; }
 .cad-project .project-links a { padding: 0.6rem 0.85rem; border: 1px solid var(--accent); background: #172838; }
 .cad-project .project-links a:hover { background: #243b50; border-width: 1px; }
 @media (max-width: 560px) {
-  .cad-project .project-body { grid-column: 1; grid-row: 2; }
+  .cad-project .project-body { grid-column: 1; grid-row: 3; }
 }
+.camera-scan { fill: #8caaff; fill-opacity: 0.12; stroke: #8caaff; stroke-width: 0.8; }
+.drive-spokes { transform-origin: 230px 112px; }
+@media (prefers-reduced-motion: no-preference) {
+  .conveyor-packages { animation: conveyor-travel 4s linear infinite; }
+  .camera-scan { animation: inspection-light 3s ease-in-out infinite; }
+  .drive-spokes { animation: drive-rotation 12s linear infinite; }
+  .diverter { animation: diverter-stroke 4s ease-in-out infinite; }
+}
+@keyframes conveyor-travel { from { transform: translateX(0); } to { transform: translateX(57px); } }
+@keyframes inspection-light { 0%, 100% { opacity: 0.35; } 50% { opacity: 1; } }
+@keyframes drive-rotation { to { transform: rotate(360deg); } }
+@keyframes diverter-stroke { 0%, 65%, 100% { transform: translateY(0); } 75%, 85% { transform: translateY(12px); } }
