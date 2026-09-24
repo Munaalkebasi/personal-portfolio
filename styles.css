@@ -178,3 +178,9 @@ main:has(#pause-motion:checked) .project-sketch:hover { transform: none; box-sha
 
 /* Keep the supplied AutoCAD screenshot inside its drawing viewport. */
 #sorting-station .project-sketch svg { overflow: hidden; }
+
+/* Text-only assembly entry uses the existing two-column project grid. */
+#robot-drive-assembly .project-body { grid-column: 2; grid-row: 1 / 3; }
+@media (max-width: 560px) {
+  #robot-drive-assembly .project-body { grid-column: 1; grid-row: 2; }
+}
