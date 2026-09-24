@@ -176,11 +176,11 @@ main:has(#pause-motion:checked) .project-sketch:hover { transform: none; box-sha
   .motion-control { display: none; }
 }
 
-/* Keep the supplied AutoCAD screenshot inside its drawing viewport. */
-#sorting-station .project-sketch svg { overflow: hidden; }
-
-/* Text-only assembly entry uses the existing two-column project grid. */
-#robot-drive-assembly .project-body { grid-column: 2; grid-row: 1 / 3; }
+/* CAD projects share a compact layout with prominent drawing links. */
+.cad-project .project-body { grid-column: 2; grid-row: 1 / 3; }
+.cad-project .project-links { gap: 0.65rem; }
+.cad-project .project-links a { padding: 0.6rem 0.85rem; border: 1px solid var(--accent); background: #172838; }
+.cad-project .project-links a:hover { background: #243b50; border-width: 1px; }
 @media (max-width: 560px) {
-  #robot-drive-assembly .project-body { grid-column: 1; grid-row: 2; }
+  .cad-project .project-body { grid-column: 1; grid-row: 2; }
 }
