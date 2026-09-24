@@ -175,3 +175,6 @@ main:has(#pause-motion:checked) .project-sketch:hover { transform: none; box-sha
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .motion-control { display: none; }
 }
+
+/* Keep the supplied AutoCAD screenshot inside its drawing viewport. */
+#sorting-station .project-sketch svg { overflow: hidden; }

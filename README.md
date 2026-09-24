@@ -7,6 +7,7 @@ A compact, responsive portfolio built with HTML and one external CSS file.
 - `index.html`: biography, projects, skills, experience, and contact links
 - `styles.css`: all typography, colours, layout, responsive rules, and print styling
 - `assets/favicon.svg`: existing favicon
+- `assets/sorting-station-autocad.png`: supplied AutoCAD screenshot; the featured project focuses its SVG viewport on the drawing and links to the full image
 - `resume.pdf`: original résumé, unchanged
 - `.nojekyll`: retained for static GitHub Pages hosting
 
@@ -25,6 +26,8 @@ Keep the files in the publishing branch's root and retain the repository's exist
 The existing portfolio's SFU education, project details, skills, employment, volunteering, and contact destinations are preserved. The robotics description remains limited to the existing programming, sensors, actuators, and data-acquisition work. No performance metrics, new credentials, or unverified project links have been added.
 
 The three project illustrations share a field-note style: dotted paper, fine engineering lines, and blue annotations. They are labelled concept sketches, not project screenshots or claims about a particular robot. SVG geometry is embedded in the HTML; all visual styling remains in styles.css.
+
+The featured Automated Vision & Sensor Sorting Station uses the actual AutoCAD screenshot. Its description covers the completed 2D concept drawing and visible components, dimensions, layers/key, annotations, and notes. It does not claim a built or tested system or an ultrasonic sensor.
 
 The visual direction uses a dark navy background, soft blue typography, larger project sketches beside each case study, numbered section headings, and a dark green skills panel.
 
