@@ -1,4 +1,4 @@
-# Muna Al-Kebasi — Engineering portfolio
+# Muna Al-Kebasic - Engineering portfolio
 
 A compact, responsive portfolio built with HTML and one external CSS file.
 
